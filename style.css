@@ -1,0 +1,150 @@
+/* Reset some default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the body with a clean, modern look */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f6fa;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styling */
+header {
+    background-color: #007BFF;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.navbar {
+    justify-content: center;
+}
+
+/* Main content styling */
+main {
+    flex: 1;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Input group for weather search */
+.input-group {
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.input-group input {
+    padding: 15px;
+    font-size: 1.1rem;
+    width: 100%;
+    border: 2px solid #007BFF;
+    border-radius: 10px 0 0 10px;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #0056b3;
+}
+
+.input-group button {
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-group button:hover {
+    background-color: #0056b3;
+}
+
+.input-group button:active {
+    transform: scale(0.98);
+}
+
+/* Weather result container */
+#weather-result {
+    display: none;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 40px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#weather-result.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#weather-result p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .input-group input, .input-group button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    #weather-result {
+        padding: 15px;
+    }
+}
